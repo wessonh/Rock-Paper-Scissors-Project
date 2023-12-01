@@ -1,0 +1,68 @@
+<!---
+Henry Wessson
+SD 230
+11/10/2023
+Rock, Paper, Scissors - CSS 
+
+This is the HTML file for my Rock, Paper, Scissors program. 
+It handles the HTML layout and calls the style sheet and the JavaScript file
+*/
+
+This program that uses JavaScript and HTML to simulate a rock, paper, scissors game. It is
+now contained in the styled HTML page rather than a prompt window. The game uses svg images
+for the move buttons. The program now has starting view where the user must press start to begin
+the game. There is a hover state for all the buttons in the game. There is also a click state
+to let the user know when a button is selected. The user must then select the play hand button
+before the timer runs out to make a choice. If the play hand button is selected the user
+must unclick it to choose a different move. The user can also unclick the move they selected if
+they want if the play hand button is unselected. If the user doesn't move a choice and confirm it
+with play hand, the computer randomly chooses for them. The computer also randomly makes its move.
+The results are dispalyed and then the play hand button is replaced with a play again button.
+The user cant make a move after the timer runs out until the play again button is clicked and the
+game resets. 
+
+Extra Credit: The program keeps track of ties, player score, and computer score over multiple games.
+The game has a timer that displays rock, paper, scissors, shoot, two seconds for each word. If the user doesn't make a choice
+the game chooses for them. Must confirm choice with play hand.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="start-button">
+    <h1>Rock Paper Scissors Game</h1>
+    <button onclick="startGame()">Start Game</button>
+</div>
+
+<div id="game-scene">
+    <h1>Choose Rock, Paper, or Scissors</h1>
+    <button id="rock-button" onclick="selectMove('Rock')">
+        <img src="hand-back-fist-regular.svg" alt="Rock">
+    </button>
+    <button id="paper-button" onclick="selectMove('Paper')">
+        <img src="hand-regular.svg" alt="Paper">
+    </button>
+    <button id="scissors-button" onclick="selectMove('Scissors')">
+        <img src="hand-scissors-regular.svg" alt="Scissors">
+    </button>
+    <div id="result"></div>
+    <div id="score">User: 0, Computer: 0, Ties: 0</div>
+    <div id="timer"></div>
+  
+    <div id="play-buttons">
+        <button id="play-button" onclick="playButtonClick()" disabled>Play Hand</button>
+        <button id="play-again-button" onclick="playAgain()">Play Again</button>
+    </div>
+</div>
+<script src="RPSscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* 
+Henry Wessson
+SD 230
+11/10/2023
+Rock, Paper, Scissors - CSS 
+
+This is the CSS style sheet for my Rock, Paper, Scissors program. 
+Contains the styling for the HTML elements 
+*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    background: linear-gradient(to bottom, #aaffaa, #ffffff); 
+    background-size: 100% 100%;
+}
+
+h1 {
+    margin-bottom: 10%;
+    color: blue;
+}
+
+#game-scene {
+    display: none;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+#start-button {
+    margin-top: 20%;
+}
+
+button {
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+button img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: lightblue;
+    transform: scale(1.05); 
+}
+
+button.selected {
+    background-color: yellow;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#play-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#play-button,
+#play-again-button {
+    display: none;
+}
+
+#rock-button,
+#paper-button,
+#scissors-button {
+    width: 150px; 
+    height: 150px; 
+    border: none;
+}
+
+#rock-button img,
+#paper-button img,
+#scissors-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px; 
+}
